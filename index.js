@@ -28,6 +28,11 @@ client.on("message", function (message) {
       const sum = numArgs.reduce((counter, x) => counter += x);
       message.reply(`다 더하면 ${sum}!`);
       break;
+    case "그없":
+      message.channel.send({embed: {
+        image: {url: 'https://steamuserimages-a.akamaihd.net/ugc/607224401095812492/8A898025036151E6BC9DE3B47871A459E916036A/'}
+      }});
+      break;
     case "킹치만":
       const emoji = new Discord.MessageAttachment('https://mblogthumb-phinf.pstatic.net/MjAxOTEwMTVfMTE2/MDAxNTcxMTQ0MjIwODE4.Yd4D6HvDtIQ600HpJJJbadGBT8aVJ91nQ4OUp6jd7oYg.uvrak7O9UOuiIKfWDh7KG906yeEYBSptki2qdXw__YMg.PNG.azzi_01/01_.png?type=w800');
       message.channel.send(emoji);
