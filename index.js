@@ -63,15 +63,13 @@ client.on("message", function (message) {
             }, 2500);
           });
       }
-      // add an extra to delete the current message too
+      // 전송한 커맨드까지 삭제하려면 +1
       const amount = Number(input) > 100
         ? 101
         : Number(input) + 1;
       message.channel.bulkDelete(amount, true)
         .then((_message) => {
           message.channel
-          // do you want to include the current message here?
-          // if not it should be ${_message.size - 1}
             .send(`명령어와 메시지 \`${_message.size - 1}\`개를 삭제했어요! :broom:`)
             .then((sent) => {
               setTimeout(() => {
